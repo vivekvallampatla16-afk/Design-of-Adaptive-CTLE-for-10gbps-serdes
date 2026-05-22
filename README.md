@@ -16,7 +16,13 @@ To improve signal integrity, this project uses:
 - MATLAB-based reconstruction and verification of Spectre AC responses
 
 ## Adaptive CTLE Architecture
+### Conventional CTLE
 
+![Conventional CTLE](images/conventional_ctle_schematic.png)
+
+### Proposed Adaptive CTLE
+
+![Adaptive CTLE](images/adaptive_ctle_schematic.png)
 The CTLE is based on a source-degenerated differential pair. A programmable capacitor bank is added in the degeneration path to control the zero location and tune the amount of high-frequency peaking.
 
 The adaptive CTLE supports 7 peaking modes.
@@ -37,22 +43,28 @@ The adaptive CTLE supports 7 peaking modes.
 
 ## Repository Contents
 
-```text
-adaptive-ctle-ffe-10gbps-serdes/
-├── images/
-│   ├── adaptive_ctle_schematic.png
-│   ├── conventional_ctle_schematic.png
-│   ├── all_peakings.png
-│   ├── cadence_peakings.png
-│   ├── error_5GHz.png
-│   ├── channel_eye_diagram.png
-│   └── ffe+channel_eye_diagram.png
-├── presentation/
-│   └── adaptive_ctle_ffe_presentation.pdf
-└── README.md
+
 
 Results Summary
+### Programmable Peaking Response
 
+![Programmable Peaking](images/all_peakings.png)
+
+### Spectre Peaking Results
+
+![Cadence Peaking](images/cadence_peakings.png)
+
+### MATLAB-Spectre Error Near 5 GHz
+
+![5GHz Error](images/error_5GHz.png)
+
+### Channel Eye Diagram
+
+![Channel Eye Diagram](images/channel_eye_diagram.png)
+
+### Equalized Eye Diagram
+
+![FFE and CTLE Eye Diagram](images/ffe+channel_eye_diagram.png)
 The unequalized channel shows severe eye closure due to insertion loss and ISI. With equalization, the eye opening improves significantly.
 
 The CTLE provides programmable high-frequency boosting, while the FFE performs transmitter-side pre-distortion to reduce time-domain ISI.
@@ -67,3 +79,18 @@ Note
 This repository contains only high-level schematics, summarized simulation results, and presentation material.
 
 Raw Cadence design files, PDK files, model files, technology files, and confidential setup files are not included.
+
+
+```text
+adaptive-ctle-ffe-10gbps-serdes/
+├── images/
+│   ├── adaptive_ctle_schematic.png
+│   ├── conventional_ctle_schematic.png
+│   ├── all_peakings.png
+│   ├── cadence_peakings.png
+│   ├── error_5GHz.png
+│   ├── channel_eye_diagram.png
+│   └── ffe+channel_eye_diagram.png
+├── presentation/
+│   └── adaptive_ctle_ffe_presentation.pdf
+└── README.md 
