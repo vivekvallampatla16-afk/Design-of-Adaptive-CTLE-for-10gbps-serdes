@@ -1,3 +1,7 @@
+## Presentation
+
+[View the project presentation](presentation/Design-of-Equalizers-for-High-speed-Serial-Links%20.pdf)
+
 # Adaptive CTLE with 3-Tap FFE for 10 Gb/s NRZ Serial Links
 
 This project presents a low-power adaptive Continuous-Time Linear Equalizer (CTLE) combined with a 3-tap Feed-Forward Equalizer (FFE) for high-speed serial link equalization.
@@ -80,7 +84,7 @@ This repository contains only high-level schematics, summarized simulation resul
 
 Raw Cadence design files, PDK files, model files, technology files, and confidential setup files are not included.
 
-
+Add presentation link to README
 ```text
 adaptive-ctle-ffe-10gbps-serdes/
 ├── images/
