@@ -1,6 +1,6 @@
 ## Presentation
 
-[View the project presentation](presentation/Design-of-Equalizers-for-High-speed-Serial-Links%20.pdf)
+[View the project presentation](presentation/Design-of-Equalizers-for-High-speed-Serial-Links.pdf)
 
 # Adaptive CTLE with 3-Tap FFE for 10 Gb/s NRZ Serial Links
 
