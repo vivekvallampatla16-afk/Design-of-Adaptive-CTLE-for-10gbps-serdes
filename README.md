@@ -1,12 +1,12 @@
-## Presentation
-
-[View the project presentation](presentation/Design-of-Equalizers-for-High-speed-Serial-Links.pdf)
-
 # Adaptive CTLE with 3-Tap FFE for 10 Gb/s NRZ Serial Links
 
 This project presents a low-power adaptive Continuous-Time Linear Equalizer (CTLE) combined with a 3-tap Feed-Forward Equalizer (FFE) for high-speed serial link equalization.
 
 The system targets a 10 Gb/s NRZ link over an FR-4 channel with approximately 8 dB insertion loss at the 5 GHz Nyquist frequency. The transmitter-side FFE reduces deterministic ISI using pre-distortion, while the receiver-side adaptive CTLE compensates for high-frequency channel loss.
+
+## Presentation
+
+[View / Download the project presentation](presentation/Design-of-Equalizers-for-High-speed-Serial-Links.pdf)
 
 ## Project Overview
 
@@ -20,6 +20,7 @@ To improve signal integrity, this project uses:
 - MATLAB-based reconstruction and verification of Spectre AC responses
 
 ## Adaptive CTLE Architecture
+
 ### Conventional CTLE
 
 ![Conventional CTLE](images/conventional_ctle_schematic.png)
@@ -27,6 +28,7 @@ To improve signal integrity, this project uses:
 ### Proposed Adaptive CTLE
 
 ![Adaptive CTLE](images/adaptive_ctle_schematic.png)
+
 The CTLE is based on a source-degenerated differential pair. A programmable capacitor bank is added in the degeneration path to control the zero location and tune the amount of high-frequency peaking.
 
 The adaptive CTLE supports 7 peaking modes.
@@ -45,11 +47,12 @@ The adaptive CTLE supports 7 peaking modes.
 | FoM | 0.012 pJ/bit/dB |
 | MATLAB-Spectre Error at 5 GHz | < 0.021 dB |
 
-## Repository Contents
+## Results Summary
 
+The unequalized channel shows severe eye closure due to insertion loss and ISI. With equalization, the eye opening improves significantly.
 
+The CTLE provides programmable high-frequency boosting, while the FFE performs transmitter-side pre-distortion to reduce time-domain ISI.
 
-Results Summary
 ### Programmable Peaking Response
 
 ![Programmable Peaking](images/all_peakings.png)
@@ -69,24 +72,11 @@ Results Summary
 ### Equalized Eye Diagram
 
 ![FFE and CTLE Eye Diagram](images/ffe+channel_eye_diagram.png)
-The unequalized channel shows severe eye closure due to insertion loss and ISI. With equalization, the eye opening improves significantly.
 
-The CTLE provides programmable high-frequency boosting, while the FFE performs transmitter-side pre-distortion to reduce time-domain ISI.
+## Repository Contents
 
-Tools Used
-Cadence Virtuoso
-Spectre Simulator
-MATLAB
-Verilog-A
-Note
-
-This repository contains only high-level schematics, summarized simulation results, and presentation material.
-
-Raw Cadence design files, PDK files, model files, technology files, and confidential setup files are not included.
-
-Add presentation link to README
 ```text
-adaptive-ctle-ffe-10gbps-serdes/
+Design-of-Adaptive-CTLE-for-10gbps-serdes/
 ├── images/
 │   ├── adaptive_ctle_schematic.png
 │   ├── conventional_ctle_schematic.png
@@ -96,5 +86,5 @@ adaptive-ctle-ffe-10gbps-serdes/
 │   ├── channel_eye_diagram.png
 │   └── ffe+channel_eye_diagram.png
 ├── presentation/
-│   └── adaptive_ctle_ffe_presentation.pdf
-└── README.md 
+│   └── Design-of-Equalizers-for-High-speed-Serial-Links.pdf
+└── README.md
